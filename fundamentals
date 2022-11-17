@@ -1,0 +1,25 @@
+//Reversed Strings
+export function solution(str: string): string {
+  let reversedString: string = '';
+  for (let i: number = str.length - 1; i >= 0; i--) {
+    reversedString += str[i];
+  }
+  return reversedString; // reverse this!
+}
+
+//Convert a Boolean to a String
+export const booleanToString = (b:boolean):string => {
+  // your code here
+  return b.toString();
+};
+
+//Sum of Positive
+export function positiveSum(arr:number[]):number {
+  let sum: number = 0;
+  for (let i: number = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
