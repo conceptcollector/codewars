@@ -100,3 +100,41 @@ export function reverseWords(str: string): string {
   return str.split("").reverse().join("").split(" ").reverse().join(" ");
     
 }
+
+
+// Valid Braces (Rank Up)
+/* Lots of credit to Code Maniac on StackOverflow.
+I basically just recreated what they had done after reading through it. */
+
+export function validBraces(braces: string): boolean {
+
+  // create an empty array
+  let valid: string[] = [];
+  
+  for ( let i: number = 0; i < braces.length; i++ ) {
+    
+    // write an if statement to begin filling valid with characters
+    if ( braces[i] === "(" ||
+         braces[i] === "[" ||
+         braces[i] === "{" ) {
+      valid.push( braces[i] )
+    } else {
+      if ( valid.length === 0 ) {
+        return false;
+      }
+      // write an if statement checking closing braces against the most recent value
+      let lastValue: string = valid[ valid.length-1 ];
+      if ( braces[i] === ")" && lastValue === "(" ||
+           braces[i] === "]" && lastValue === "[" ||
+           braces[i] === "}" && lastValue === "{" ) {
+        // remove every most recent brace, if it's valid
+        valid.pop();
+      } else {
+        // equality operator always returns boolean
+        return valid.length === 0;
+      }
+    }
+  }
+  return valid.length === 0;
+}
+//
