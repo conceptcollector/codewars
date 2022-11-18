@@ -102,7 +102,7 @@ export function reverseWords(str: string): string {
 }
 
 
-// Valid Braces (Rank Up)
+// Valid Braces
 /* Lots of credit to Code Maniac on StackOverflow.
 I basically just recreated what they had done after reading through it. */
 
