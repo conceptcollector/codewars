@@ -137,4 +137,57 @@ export function validBraces(braces: string): boolean {
   }
   return valid.length === 0;
 }
-//
+
+
+// Disemvoweled Trolls
+
+export class Kata {
+  static disemvowel( str: string ): string {
+    
+    let disemvoweledTroll: string = '';
+    
+    let vowels: string[] = [
+      'a', 'A',
+      'e', 'E',
+      'i', 'I',
+      'o', 'O',
+      'u', 'U'
+    ];
+    
+    // check str for non-vowel letters to add to the new string
+    for ( let i: number = 0; i < str.length; i++ ) {
+      if ( !vowels.includes( str[i] ) ) {
+        disemvoweledTroll += str[i];
+    // skip vowels
+      } else {
+        continue;
+      }
+    }
+    return disemvoweledTroll;
+  }
+}
+
+
+// Find the Parity Outlier
+
+export function findOutlier(integers: number[]): number {
+  
+  // set up two empty arrays
+  let evens: number[] = [];
+  let odds: number[] = [];
+    
+  for ( let i: number = 0; i < integers.length; i++ ) {
+    
+    // push (absolute, due to negative) even numbers into evens and odds into odds
+    if ( Math.abs( integers[i] ) % 2 === 0 ) {
+      evens.push( integers[i] );
+      console.log(evens);
+    } else if ( Math.abs( integers[i] ) % 2 === 1 ) {
+      odds.push( integers[i] );
+      console.log(odds);
+    }
+  }
+    
+  return (evens.length === 1 ? evens[0] : odds[0]);
+
+}
