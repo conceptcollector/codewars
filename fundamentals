@@ -89,3 +89,14 @@ export function areYouPlayingBanjo(name: string): string {
   return name + banjoPlayer;
   
 }
+
+
+// Reverse Words
+// Credit goes to Kunal Jain on StackOverflow for this one. I just copied and pasted and it worked.
+
+export function reverseWords(str: string): string {
+
+  // your code here
+  return str.split("").reverse().join("").split(" ").reverse().join(" ");
+    
+}
