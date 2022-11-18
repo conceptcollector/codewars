@@ -1,25 +1,91 @@
-//Reversed Strings
-export function solution(str: string): string {
+// Reversed Strings
+
+export function solution( str: string ): string {
+  
   let reversedString: string = '';
-  for (let i: number = str.length - 1; i >= 0; i--) {
+  
+  // decrementing for loop, beginning at end of string
+  for ( let i: number = str.length - 1; i >= 0; i-- ) {
     reversedString += str[i];
   }
-  return reversedString; // reverse this!
+  
+  return reversedString;
+  
 }
 
-//Convert a Boolean to a String
-export const booleanToString = (b:boolean):string => {
-  // your code here
+
+// Convert a Boolean to a String
+
+export const booleanToString = (b: boolean): string => {
+
   return b.toString();
+  
 };
 
-//Sum of Positive
-export function positiveSum(arr:number[]):number {
+
+// Sum of Positive
+
+export function positiveSum( arr: number[] ): number {
+
   let sum: number = 0;
+  
+  // loop through array, checking for positive numbers to add
   for (let i: number = 0; i < arr.length; i++) {
     if (arr[i] > 0) {
       sum += arr[i];
     }
   }
+  
   return sum;
+  
+}
+
+
+// String Repeat
+
+export function repeatStr(n: number, s: string): string {
+
+  let repeatingS: string = '';
+  
+  while (n > 0) {
+    repeatingS += s;
+    n--;
+  }
+  
+  return repeatingS;
+  
+}
+
+// Will you make it?
+
+/* Thankfully I was able to understand why I was doing everything backwards at just about
+the same time that I decided I must be doing everything backwards. */
+
+export const zeroFuel = (distance: number, mpg: number, fuelLeft: number): boolean {
+
+  let makeIt: boolean = true;
+  
+  // if the distance / mpg was MORE than the fuel that was left, they wouldn't make it.
+  if ((distance / mpg) > fuelLeft) {
+    makeIt = false;
+  }
+  
+    return makeIt;
+    
+};
+
+
+// Are You Playing Banjo?
+
+export function areYouPlayingBanjo(name: string): string {
+  
+  let banjoPlayer: string = " does not play banjo"
+  
+  // check the first character of name
+  if (name[0] === 'R' || name[0] === 'r') {
+    banjoPlayer = " plays banjo";
+  }
+  
+  return name + banjoPlayer;
+  
 }
