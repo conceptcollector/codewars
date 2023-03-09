@@ -1,3 +1,11 @@
+// function 1 - hello world
+
+/ Write a function "greet" that returns "hello world!"
+
+function greet() {
+  return "hello world!";
+}
+
 // Sentence Smash
 
 function smash (words) {
