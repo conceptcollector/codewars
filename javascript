@@ -60,3 +60,10 @@ function getGrade (s1, s2, s3) {
 function sayHello(name) {
   return 'Hello, ' + name;
 }
+
+// Sort and Star
+
+function twoSort(s) {
+  s = s.sort();
+  return s[0].split('').join('***');
+}
