@@ -84,4 +84,22 @@ function findNeedle(haystack) {
   }
 }
 
+// Calculate BMI
+
+function bmi(weight, height) {
+  
+  let calculatedBmi = weight / Math.pow(height, 2);
+  
+  if (calculatedBmi <= 18.5) {
+    return "Underweight";
+  } else if (calculatedBmi > 18.5 && calculatedBmi <= 25) {
+    return "Normal";
+  } else if (calculatedBmi > 25 && calculatedBmi <= 30) {
+    return "Overweight";
+  } else {
+    return "Obese";
+  }
+    
+}
+
 //
