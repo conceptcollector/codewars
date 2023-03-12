@@ -172,3 +172,13 @@ function sumMix(x){
   }
   return counter;
 }
+
+// String ends with?
+
+function solution(str, ending){
+  if (str.substr(str.length - ending.length, ending.length) === ending) {
+    return true;
+  } else {
+    return false;
+  }
+}
