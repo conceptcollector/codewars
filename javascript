@@ -130,4 +130,15 @@ function makeNegative(num) {
   }
 }
 
-// 
+// The highest profit wins!
+
+function minMax(arr){
+  let newArr = [];
+  newArr.push(arr.sort(function(a, b) {
+    return a-b;
+  })[0]);
+  newArr.push(arr.sort(function(a, b) {
+    return a-b;
+  })[arr.length - 1]);
+  return newArr;
+}
