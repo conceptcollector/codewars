@@ -142,3 +142,23 @@ function minMax(arr){
   })[arr.length - 1]);
   return newArr;
 }
+
+// Beginner Series #3 Sum of Numbers
+
+function getSum(a, b)
+{
+  let counter = 0;
+   if (a < b) {
+     for (let i = a; i <= b; i++) {
+       counter += i;
+     }
+     return counter;
+   } else if (b < a) {
+     for (let i = b; i <= a; i++) {
+       counter += i;
+     }
+     return counter;
+   } else if (a === b) {
+     return counter += a;
+   }
+}
