@@ -162,3 +162,13 @@ function getSum(a, b)
      return counter += a;
    }
 }
+
+// Sum Mixed Array
+
+function sumMix(x){
+  let counter = 0;
+  for (let i = 0; i < x.length; i++) {
+    counter += parseInt(x[i], 10);
+  }
+  return counter;
+}
