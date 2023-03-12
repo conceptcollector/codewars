@@ -67,3 +67,9 @@ function twoSort(s) {
   s = s.sort();
   return s[0].split('').join('***');
 }
+
+// Grasshopper - Messi goals function
+
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}
