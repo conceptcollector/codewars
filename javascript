@@ -221,3 +221,14 @@ var summation = function (num) {
   }
   return sum;
 }
+
+// L1: Set Alarm
+
+function setAlarm(employed, vacation){
+  if (employed === true &&
+     vacation === false) {
+    return true;
+  } else {
+    return false;
+  }
+}
