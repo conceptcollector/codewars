@@ -232,3 +232,25 @@ function setAlarm(employed, vacation){
     return false;
   }
 }
+
+// Count of positives / sum of negatives
+
+function countPositivesSumNegatives(input) {
+  let newArray = [];
+  let positiveCount = 0;
+  let negativeSum = 0;
+  if (input[0] === undefined) {
+    return [];
+  } else {
+    for (let i = 0; i < input.length; i++) {
+      if (input[i] > 0) {
+        positiveCount++;
+      } else if (input[i] < 0) {
+        negativeSum += input[i];
+      }
+    }
+    newArray.push(positiveCount);
+    newArray.push(negativeSum);
+  }
+  return newArray;
+}
