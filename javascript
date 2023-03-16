@@ -239,7 +239,9 @@ function countPositivesSumNegatives(input) {
   let newArray = [];
   let positiveCount = 0;
   let negativeSum = 0;
-  if (input[0] === undefined) {
+  if (input === null) {
+    return [];
+  } else if (input[0] === undefined) {
     return [];
   } else {
     for (let i = 0; i < input.length; i++) {
@@ -253,4 +255,3 @@ function countPositivesSumNegatives(input) {
     newArray.push(negativeSum);
   }
   return newArray;
-}
