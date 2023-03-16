@@ -265,3 +265,9 @@ function simpleMultiplication(number) {
       return number * 9;
     }
 }
+
+// Is it even?
+
+function testEven(n) {
+  return (n % 2 === 0 ? true : false);
+}
