@@ -196,3 +196,18 @@ function stray(numbers) {
     }
   }
 }
+
+// Testing 1-2-3
+
+var number=function(array){
+  let counter = 1;
+  if (array[0] === undefined) {
+    return [];
+  } else {
+    for (let i = 0; i < array.length; i++) {
+      array[i] = `${counter}: ` + array[i];
+      counter++;
+    }
+    return array;
+  }
+}
