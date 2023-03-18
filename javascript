@@ -271,3 +271,19 @@ function simpleMultiplication(number) {
 function testEven(n) {
   return (n % 2 === 0 ? true : false);
 }
+
+// Money, Money, Money
+// Okay... this isn't calculating correct and I don't know why...
+
+function calculateYears(principal, interest, tax, desired) {
+  let years = 0;
+  let totalSum = principal;
+  let interestAmount = totalSum * interest;
+  let taxAmount = tax * interestAmount;
+  let combinedInterestTax = interestAmount - taxAmount;
+  while (totalSum < desired) {
+    totalSum += combinedInterestTax;
+    years++;
+  }
+  return years;
+}
