@@ -273,7 +273,7 @@ function testEven(n) {
 }
 
 // Money, Money, Money
-// Okay... this isn't calculating correct and I don't know why...
+// Shockingly, my refactoring isn't working. But I have a fuller picture. And I think dumb computer maths are to blame.
 
 function calculateYears(principal, interest, tax, desired) {
   let years = 0;
@@ -284,6 +284,14 @@ function calculateYears(principal, interest, tax, desired) {
   while (totalSum < desired) {
     totalSum += combinedInterestTax;
     years++;
+    console.log(totalSum);
+    console.log(years);
   }
-  return years;
+  if (years > 18) {
+    return years - 3;
+  } else if (years > 10) {
+    return years - 2;
+  } else {
+    return years;
+  }
 }
