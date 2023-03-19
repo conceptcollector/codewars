@@ -287,3 +287,26 @@ function calculateYears(principal, interest, tax, desired) {
   }
   return years;
 }
+
+// I love you, a little , a lot, passionately ... not at all
+
+function howMuchILoveYou(nbPetals) {
+    let petalPhrases = [
+      "I love you",
+      "a little",
+      "a lot",
+      "passionately",
+      "madly",
+      "not at all"
+    ];
+    let counter = 0;
+    while (nbPetals > 1) {
+      nbPetals--;
+      counter++;
+      if (counter === 6) {
+        counter = 0;
+      }
+      petalPhrases[counter];
+    }
+    return petalPhrases[counter];
+}
