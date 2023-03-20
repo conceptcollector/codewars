@@ -310,3 +310,15 @@ function howMuchILoveYou(nbPetals) {
     }
     return petalPhrases[counter];
 }
+
+// Find the first non-consecutive number
+
+function firstNonConsecutive (arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    console.log(arr[i - 1]);
+    if (arr[i] - arr[i - 1] !== 1) {
+      return arr[i];
+    }
+  }
+  return null;
+}
