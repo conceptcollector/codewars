@@ -329,3 +329,9 @@ function doubleInteger(i) {
   // i will be an integer. Double it and return it.
   return i * 2;
 }
+
+// Remove First and Last Character
+
+function removeChar(str){
+ return str.substr(1, str.length -2);
+};
