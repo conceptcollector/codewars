@@ -314,11 +314,11 @@ function howMuchILoveYou(nbPetals) {
 // Find the first non-consecutive number
 
 function firstNonConsecutive (arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    console.log(arr[i - 1]);
-    if (arr[i] - arr[i - 1] !== 1) {
-      return arr[i];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[arr.length - 1]) {
+      return null;
+    } else if (arr[i + 1] - arr[i] !== 1) {
+      return arr[i + 1];
     }
   }
-  return null;
 }
