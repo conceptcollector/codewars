@@ -335,3 +335,13 @@ function doubleInteger(i) {
 function removeChar(str){
  return str.substr(1, str.length -2);
 };
+
+// Filter out the geese
+
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  let gooselessArray = birds.filter(function(el) {
+    return !geese.includes(el);
+  })
+  return gooselessArray;
+};
