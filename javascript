@@ -378,3 +378,23 @@ function lovefunc(flower1, flower2){
     return false;
   }
 }
+
+// Two to One
+
+function longest(s1, s2) {
+  s1 = s1 + s2;
+  console.log(s1);
+  let s3 = [];
+  let s4 = [];
+  for (let i = 0; i < s1.length; i++) {
+    s3.push(s1[i]);
+  }
+  s3.sort();
+  console.log(s3);
+  for (let i = 0; i < s3.length; i++) {
+    if (s3[i] !== s3[i - 1]) {
+      s4.push(s3[i]);
+    }
+  }
+  return s4.join('');
+}
