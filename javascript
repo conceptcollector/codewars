@@ -367,3 +367,14 @@ function gimme (triplet) {
     }
   }
 }
+
+// Opposites Attract
+
+function lovefunc(flower1, flower2){
+  let sheLovesMe = flower1 + flower2;
+  if (sheLovesMe % 2 === 1) {
+    return true;
+  } else {
+    return false;
+  }
+}
