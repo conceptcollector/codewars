@@ -409,3 +409,9 @@ unction getMiddle(s)
     return s[Math.round((s.length / 2) - 1)];
   }
 }
+
+// MakeUpperCase
+
+function makeUpperCase(str) {
+  return str.toUpperCase();
+}
