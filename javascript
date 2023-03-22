@@ -351,3 +351,19 @@ function gooseFilter (birds) {
 function findDifference(a, b) {
   return Math.abs(a[0] * a[1] * a[2] - b[0] * b[1] * b[2]);
 }
+
+// Find the middle element
+
+function gimme (triplet) {
+  let unsortedTriplet = triplet.map(function(el, i) {
+    return { index: i, value: el };
+  });
+  triplet.sort(function(a, b) {
+    return a-b;
+  });
+  for (let i = 0; i < unsortedTriplet.length; i++) {
+    if (unsortedTriplet[i].value === triplet[1]) {
+      return unsortedTriplet[i].index;
+    }
+  }
+}
