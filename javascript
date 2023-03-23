@@ -415,3 +415,14 @@ unction getMiddle(s)
 function makeUpperCase(str) {
   return str.toUpperCase();
 }
+
+// Convert number to reversed array of digits
+
+function digitize(n) {
+  n = n.toString();
+  let a = [];
+  for (let i = n.length - 1; i >= 0; i--) {
+    a.push(+n[i]);
+  }
+  return a;
+}
