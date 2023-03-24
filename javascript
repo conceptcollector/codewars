@@ -429,3 +429,30 @@ function digitize(n) {
 
 // Transportation on vacation
 
+function rentalCarCost(d) {
+  
+  let cost = 40 * d;
+  
+  if (d >= 7) {
+    return cost - 50;
+  } else if (d >= 3) {
+    return cost - 20;
+  } else {
+    return cost;
+  }
+  
+}
+
+// DNA to RNA Conversion
+
+function DNAtoRNA(dna) {
+  let rna = '';
+  for (let i = 0; i < dna.length; i++) {
+    if (dna.charAt(i) === 'T') {
+      rna += 'U';
+    } else {
+      rna += dna[i];
+    }
+  }
+  return rna;
+}
