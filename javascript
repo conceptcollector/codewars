@@ -427,20 +427,5 @@ function digitize(n) {
   return a;
 }
 
-// Regex validate PIN code
-// no clue why this won't pass, but I'll get back to it tomorrow
+// Transportation on vacation
 
-function validatePIN (pin) {
-  if (pin.length === 4 ||
-     pin.length === 6) {
-    for (let i = 0; i < pin.length; i++) {
-      if (!(pin[i] >= 0) && !(pin[i] <= 9)) {
-        return false;
-      } else {
-        return true;
-      }
-    }
-  } else {
-    return false;
-  }
-}
