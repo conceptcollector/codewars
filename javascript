@@ -456,3 +456,49 @@ function DNAtoRNA(dna) {
   }
   return rna;
 }
+
+// Take a 10 Minutes Walk
+
+// atempt one:
+function isValidWalk( walk ) {
+  
+  let north = 0;
+  let east = 0;
+  let south = 0;
+  let west = 0;
+  
+  if ( walk.length !== 10 ) {
+    return false;
+  }
+  else {
+    for ( let i = 0; i < walk.length; i++ ) {
+      switch( walk[i] ) {
+          case 'n':
+            north += 1;
+            south -= 1;
+            break;
+          case 'e':
+            east += 1;
+            west -= 1;
+            break;
+          case 's':
+            south += 1;
+            north -= 1;
+            break;
+          case 'w':
+            west += 1;
+            east -= 1;
+            break;
+          default:
+            break;
+      }
+      if ( north && east && south && west === 0) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+  }
+  return true;
+}
